@@ -11,6 +11,13 @@ public class TestCase
 
     public void Run()
     {
+        Setup();
         this.GetType().InvokeMember(name, BindingFlags.InvokeMethod, null, this, null);
     }
+
+    public virtual void Setup()
+    {
+
+    }
+
 }
