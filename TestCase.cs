@@ -9,15 +9,14 @@ public class TestCase
         this.name = name;
     }
 
-    public void Run()
-    {
-        Setup();
-        this.GetType().InvokeMember(name, BindingFlags.InvokeMethod, null, this, null);
-    }
-
     public virtual void Setup()
     {
 
     }
 
+    public void Run()
+    {
+        Setup();
+        this.GetType().InvokeMember(name, BindingFlags.InvokeMethod, null, this, null);
+    }
 }

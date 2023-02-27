@@ -1,21 +1,18 @@
-
 public class WasRun : TestCase
 {
-    public bool wasRun;
-    public bool wasSetup;
+    public string? log;
 
     public WasRun(string name) : base(name)
     {
     }
 
-    public void TestMethod()
-    {
-        wasRun = true;
-    }
-
     public override void Setup()
     {
-        this.wasRun = false;
-        this.wasSetup = true;
+        this.log = "setup ";
+    }
+
+    public void TestMethod()
+    {
+        this.log += "testmethod ";
     }
 }
