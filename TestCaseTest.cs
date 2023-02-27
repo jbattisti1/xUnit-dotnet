@@ -6,10 +6,6 @@ public class TestCaseTest : TestCase
     {
     }
 
-    public override void Setup()
-    {
-    }
-
     public void TestTemplateMethod()
     {
         var test = new WasRun("TestMethod");
