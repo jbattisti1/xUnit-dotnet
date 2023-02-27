@@ -15,4 +15,9 @@ public class WasRun : TestCase
     {
         this.log += "testmethod ";
     }
+
+    public override void TearDown()
+    {
+        this.log += "teardown ";
+    }
 }

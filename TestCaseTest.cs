@@ -14,6 +14,6 @@ public class TestCaseTest : TestCase
     {
         var test = new WasRun("TestMethod");
         test.Run();
-        Debug.Assert("setup testmethod " == test.log);
+        Debug.Assert("setup testmethod teardown " == test.log);
     }
 }
