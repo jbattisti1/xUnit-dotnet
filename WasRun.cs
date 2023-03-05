@@ -20,4 +20,9 @@ public class WasRun : TestCase
     {
         this.log += "teardown ";
     }
+
+    public void TestBrokenMethod()
+    {
+        throw new Exception();
+    }
 }

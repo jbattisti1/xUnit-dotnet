@@ -11,11 +11,14 @@ public class TestCase
 
     public virtual void Setup(){}
 
-    public void Run()
+    public TestResult Run()
     {
+        var result = new TestResult();
+        result.TestStarted();
         Setup();
         this.GetType().InvokeMember(name, BindingFlags.InvokeMethod, null, this, null);
         TearDown();
+        return result;
     }
 
     public virtual void TearDown(){}
