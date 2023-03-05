@@ -15,9 +15,16 @@ public class TestCase
     {
         var result = new TestResult();
         result.TestStarted();
-        Setup();
-        this.GetType().InvokeMember(name, BindingFlags.InvokeMethod, null, this, null);
-        TearDown();
+        try
+        {
+            Setup();
+            this.GetType().InvokeMember(name, BindingFlags.InvokeMethod, null, this, null);
+            TearDown();
+        }
+        catch (Exception)
+        {
+            result.TestFailed();
+        }
         return result;
     }
 
