@@ -8,5 +8,5 @@ Invoke tearDown even if the test method fails
 ~~Report collected results~~    
 ~~Log string in WasRun~~    
 ~~Report failed tests~~    
-Catch and report setUp erros
+Catch and report setUp erros    
 Create TestSuite from a TestCase class
