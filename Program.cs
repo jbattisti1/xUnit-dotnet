@@ -1,6 +1,11 @@
-﻿new TestCaseTest("TestTemplateMethod").Run();
-new TestCaseTest("TestResult").Run();
-new TestCaseTest("TestFailedResultFormatting").Run();
-new TestCaseTest("TestFailedResult").Run();
-new TestCaseTest("TestFailedResultSetup").Run();
-new TestCaseTest("TestFailedResultTearDown").Run();
+﻿var suite = new TestSuite();
+suite.Add(new TestCaseTest("TestTemplateMethod"));
+suite.Add(new TestCaseTest("TestResult"));
+suite.Add(new TestCaseTest("TestFailedResultFormatting"));
+suite.Add(new TestCaseTest("TestFailedResult"));
+suite.Add(new TestCaseTest("TestFailedResultSetup"));
+suite.Add(new TestCaseTest("TestFailedResultTearDown"));
+suite.Add(new TestCaseTest("TestSuite"));
+var result = new TestResult();
+suite.Run(result);
+Console.WriteLine(result.Summary());

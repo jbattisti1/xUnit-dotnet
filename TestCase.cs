@@ -11,9 +11,8 @@ public class TestCase
 
     public virtual void Setup(){}
 
-    public TestResult Run()
+    public void Run(TestResult result)
     {
-        var result = new TestResult();
         result.TestStarted();
         try
         {
@@ -25,7 +24,6 @@ public class TestCase
         {
             result.TestFailed();
         }
-        return result;
     }
 
     public virtual void TearDown(){}
