@@ -1,3 +1,5 @@
+namespace beck;
+
 public class WasRun : TestCase
 {
     public string? log;

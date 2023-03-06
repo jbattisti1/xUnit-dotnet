@@ -1,5 +1,7 @@
 using System.Reflection;
 
+namespace beck;
+
 public class TestCase
 {
     public string name = "";

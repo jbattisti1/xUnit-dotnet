@@ -1,3 +1,5 @@
+namespace beck;
+
 public class TestSuite
 {
     public List<TestCase> tests = new List<TestCase>();

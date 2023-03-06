@@ -1,5 +1,7 @@
 using System.Diagnostics;
 
+namespace beck;
+
 public class TestCaseTest : TestCase
 {
     public TestResult result = new TestResult();
