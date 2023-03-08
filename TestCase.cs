@@ -13,7 +13,10 @@ public class TestCase
     {
         Setup();
         this.GetType().InvokeMember(this.name, BindingFlags.InvokeMethod, null, this, null);
+        TearDown();
     }
 
     public virtual void Setup(){}
+
+    public virtual void TearDown(){}
 }

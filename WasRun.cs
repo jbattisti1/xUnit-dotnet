@@ -1,30 +1,29 @@
 public class WasRun : TestCase
 {
-    private bool hasRun;
-    private bool hasSetup;
+    private string log;
 
     public WasRun(string name) : base(name)
     {
+        this.log = string.Empty;
     }
 
     public override void Setup()
     {
-        this.hasRun = false;
-        this.hasSetup = true;
+        this.log += "setup ";
     }
 
     public void TestMethod()
     {
-        this.hasRun = true;
+        this.log += "testmethod ";
     }
 
-    public bool HasRun()
+    public override void TearDown()
     {
-        return this.hasRun;
+        this.log += "teardown ";
     }
 
-    public bool HasSetup()
+    public string GetLog()
     {
-        return this.hasSetup;
+        return this.log;
     }
 }

@@ -1,2 +1,1 @@
-new TestCaseTests("TestRunning").Run();
-new TestCaseTests("TestSetup").Run();
+new TestCaseTests("TestTemplateSetup").Run();
