@@ -17,6 +17,11 @@ public class WasRun : TestCase
         this.log += "testmethod ";
     }
 
+    public void TestBrokenMethod()
+    {
+        throw new Exception();
+    }
+
     public override void TearDown()
     {
         this.log += "teardown ";

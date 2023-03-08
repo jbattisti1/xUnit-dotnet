@@ -9,14 +9,24 @@ public class TestCase
         this.name = name;
     }
 
-    public void Run()
+    public TestResult Run()
     {
+        var result = new TestResult();
+        result.TestStarted();
         Setup();
-        this.GetType().InvokeMember(this.name, BindingFlags.InvokeMethod, null, this, null);
+        try
+        {
+            this.GetType().InvokeMember(this.name, BindingFlags.InvokeMethod, null, this, null);
+        }
+        catch (Exception)
+        {
+            result.TestFailed();
+        }
         TearDown();
+        return result;
     }
 
-    public virtual void Setup(){}
+    public virtual void Setup() { }
 
-    public virtual void TearDown(){}
+    public virtual void TearDown() { }
 }
