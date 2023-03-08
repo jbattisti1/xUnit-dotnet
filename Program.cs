@@ -1,1 +1,2 @@
-Console.WriteLine("hello");
+new TestCaseTests("TestRunning").Run();
+new TestCaseTests("TestSetup").Run();
